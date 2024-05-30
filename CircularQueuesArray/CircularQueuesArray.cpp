@@ -35,6 +35,15 @@ public:
 			else
 				REAR = REAR + 1;
 		}
+		queue_array[REAR] = num;
+	}
 
+	void remove() {
+		// Cek apakah antrian kosong
+		if (FRONT == -1) {
+			cout << "Queue Underflow\n";
+			return;
+		}
+		cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
 	}
 };
